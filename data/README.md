@@ -1,19 +1,27 @@
 # SmartPark Dataset
 
-## Dataset Name
-PKLot – Parking Lot Dataset
-
-## Source
-Federal University of Paraná, Brazil
+## Dataset Description
+The final project uses two overhead parking lot images to evaluate parking space occupancy detection.
 
 ## Dataset Size
-12,417 parking lot images
+- Image 1: 51 mapped parking spaces
+- Image 2: 28 mapped parking spaces
+- Total: 79 mapped parking spaces
 
 ## Labels
-Occupied and vacant parking spaces
+- Occupied parking spaces
+- Available parking spaces
 
-## Dataset Link
-https://web.inf.ufpr.br/vri/databases/parking-lot-database/
+## Method
+Parking spaces were manually mapped using rectangular coordinates. OpenCV and Canny edge detection were used to classify each parking space.
+
+## Results
+- Image 1 accuracy: 90.20%
+- Image 2 accuracy: 100.00%
+- Combined accuracy: 93.67%
 
 ## Purpose
-The dataset will be used to test SmartPark's ability to identify occupied and available parking spaces.
+To demonstrate how computer vision can identify occupied and available parking spaces for smart parking management.
+
+## Image Sources
+Original image sources and usage permissions require verification.
