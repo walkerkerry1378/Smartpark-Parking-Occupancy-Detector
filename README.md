@@ -1,91 +1,79 @@
-# Smartpark-Parking-Occupancy-Detector
-Computer Vision project for detecting occupied and available parking spaces
+# SmartPark – Parking Occupancy Detector
+
+Computer vision project for detecting occupied and available parking spaces.
 
 ## Team Members
 Kerry Walker
 
 ## Project Tier
-Tier 1 - Core
-SmartPark uses one pretrained YOLO11 model to detect vehicles and determine parking availability.
+Originally proposed as Tier 1 – Core using YOLO11. The final implementation uses OpenCV and Canny edge detection.
 
 ## Problem Statement
-Drivers often spend unnecessary time searching for available parking spaces in crowded parking lots. This can cause frustration and contribute to traffic congestion. SmartPark aims to help drives and parking lot operators identify available parking spaces more efficently.
+Drivers often spend unnecessary time searching for available parking spaces in crowded parking lots. SmartPark aims to help drivers and parking lot operators identify available parking spaces more efficiently.
 
 ## Solution Overview
-SmartPark will use YOLO11 object detection to identify vehicles in parking lot images. The system will compare detected vehicles with parking-space location to determine which spaces are occupied or available. The results will show parking availability to help users find open spaces.
+SmartPark analyzes overhead parking lot images and classifies manually mapped parking spaces as occupied or available using computer vision.
 
 ## Technical Approach
-
-- CV Technique: Object Detection
-- Model Architecture: Convolutional Neural Network
-- Model: YOLO11
-- How I Will Use It: Pretrained model
-- Framework: Ultralytics and PyTorch
+- CV Technique: Edge detection and image processing
+- Algorithm: Canny edge detection
+- Library: OpenCV
 - Programming Language: Python
-
-Why This Approach:
-YOLO11 can detect vehicles in parking lot images.
-I selected it because I used YOLO11 in Lab 6 and
-am familiar with its object detection capabilities.
-
+- Development Environment: Google Colab
+- Parking Space Mapping: Rectangular coordinates
 
 ## Dataset
-
-- Name: PKLot Parking Lot Dataset
-- Source: Federal University of Paraná, Brazil
-- Size: 12,417 parking lot images
-- Labels: Occupied and vacant parking spaces
-- Link: https://web.inf.ufpr.br/vri/databases/parking-lot-database/
-
+- Two overhead parking lot images
+- Image 1: 51 parking spaces
+- Image 2: 28 parking spaces
+- Total: 79 parking spaces
+- Labels: Occupied and available
+- Original image sources and usage permissions require verification.
 
 ## Success Metrics
+- Target accuracy: At least 85%
+- Image 1 accuracy: 90.20%
+- Image 2 accuracy: 100.00%
+- Combined accuracy: 93.67%
+- Correct classifications: 74 out of 79
+- Incorrect classifications: 5 out of 79
+- Processing speed target: Under 2 seconds per image
+- Processing speed result: Not yet verified
 
-- Primary Metric: Parking-space occupancy accuracy
-- Target: At least 85% accuracy
-- Secondary Metric: Image processing speed
-- Target: Under 2 seconds per image
+The project exceeded its accuracy target on the two evaluated images.
 
-
-## Milestone Plan
-
-- Week 10: Blueprint submitted
-- Week 11: First working demonstration using YOLO11
-- Weeks 12–13: Add parking lot data and occupancy logic
-- Week 14: Test accuracy and processing speed
-- Week 15: Complete final demonstration and presentation
-
+## Repository Structure
+- data/ – Dataset documentation
+- docs/ – Project documentation and AI usage log
+- notebooks/ – Project notebook
+- results/ – Detection images and accuracy results
 
 ## Resources
-
-- Compute: Google Colab
-- Programming Language: Python
-- Model: YOLO11
-- Cost: $0
-
+- Google Colab
+- Python
+- OpenCV
+- GitHub
 
 ## Risks and Mitigation
 
-| Risk | Probability | Plan B |
-|---|---|---|
-| YOLO11 misses vehicles | Medium | Test confidence thresholds and review incorrect detections |
-| Incorrect parking-space occupancy results | Medium | Review predictions and adjust parking-space comparison logic |
-
+| Risk | Mitigation |
+|---|---|
+| Incorrect occupancy classification | Adjust detection thresholds |
+| Shadows and lighting variations | Improve image preprocessing |
+| Incorrect parking space mapping | Review and adjust coordinates |
+| Limited dataset | Evaluate additional parking lot images |
 
 ## Demo Video
-
-To be added for the final project.
-
+To be added.
 
 ## AI Usage Log
-
-See docs/AI_usage_log.md
-
+See docs/AI_usage_log.md.
 
 ## Current Status
-
 - [x] Repository created
-- [ ] Proposal submitted
-- [ ] First working demo
-- [ ] System works on project data
-- [ ] Metrics measured
-- [ ] Final submitted
+- [x] Working implementation
+- [x] System tested on project data
+- [x] Accuracy measured
+- [x] Results uploaded
+- [ ] Demo video added
+- [ ] Final project submitted
